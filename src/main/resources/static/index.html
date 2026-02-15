@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Control de Tareas</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+<div class="container">
+    <div class="header">
+        <h1> Control de Tareas</h1>
+        <p>Organiza tus tareas de manera simple y efectiva</p>
+    </div>
+
+    <!-- Formulario para crear tareas -->
+    <div class="task-form">
+        <form id="taskForm">
+            <div class="form-group">
+                <label for="title">Título</label>
+                <input type="text" id="title" name="title" placeholder="Ej: Comprar pan" required>
+            </div>
+            <div class="form-group">
+                <label for="description">Descripción</label>
+                <textarea id="description" name="description" placeholder="Describe los detalles de la tarea..."></textarea>
+            </div>
+            <button type="submit" class="btn"> Agregar Tarea</button>
+        </form>
+    </div>
+
+    <!-- Filtros -->
+    <div class="filters">
+        <button class="filter-btn active" data-filter="all">Todas</button>
+        <button class="filter-btn" data-filter="pending">Pendientes</button>
+        <button class="filter-btn" data-filter="completed">Completadas</button>
+    </div>
+
+    <!-- Lista de tareas -->
+    <div id="tasksContainer" class="tasks-list">
+        <!-- Las tareas se cargarán aquí -->
+    </div>
+</div>
+
+<!-- Modal de edición -->
+<div class="modal" id="editModal">
+    <div class="modal-content">
+        <h2>Editar Tarea</h2>
+        <form id="editForm">
+            <div class="form-group">
+                <label for="editTitle">Título</label>
+                <input type="text" id="editTitle" required>
+            </div>
+            <div class="form-group">
+                <label for="editDescription">Descripción</label>
+                <textarea id="editDescription"></textarea>
+            </div>
+            <button type="submit" class="btn"> Guardar Cambios</button>
+            <button type="button" class="btn btn-cancel" onclick="closeModal()"> Cancelar</button>
+        </form>
+    </div>
+</div>
+
+<script src="index.js"></script>
+</body>
+</html>
