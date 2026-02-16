@@ -89,6 +89,57 @@ Pasos para ejecutar el proyecto:
 
 7. Abrir en el navegador: http://localhost:8080/index.html
 
+Endpoints de la API
+
+Obtener todas las tareas
+GET /tasks
+
+Respuesta:
+
+[
+  {
+    "id": 1
+    "title": "Estudiar",
+    "description": "Repasar Spring Boot",
+    "completed": false
+}
+]
+
+Crear tarea
+POST /tasks
+
+Body:
+
+{
+  "title": "Nueva tarea",
+  "description": "Descripción de la tarea"
+}
+
+Actualizar tarea
+PUT /tasks/{id}
+
+Body:
+
+{
+  "title": "Tarea actualizada",
+  "description": "Nueva descripción",
+  "completed": true
+}
+Eliminar tarea
+DELETE /tasks/{id}
+Pruebas de la API
+
+Para probar la API sin la interfaz gráfica:
+
+Abrir Postman
+
+Crear una petición GET a:
+
+http://localhost:8080/tasks
+
+Para crear tareas usar POST y seleccionar Body → raw → JSON
+
+
 Funcionamiento Interno:
 
 - Las tareas se almacenan en memoria usando ArrayList.
