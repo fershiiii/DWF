@@ -12,7 +12,7 @@ Todo API – Control de Tareas es una aplicación web desarrollada bajo una arqu
 
 El sistema está diseñado para permitir a los usuarios crear, consultar, actualizar y eliminar tareas (operaciones CRUD), así como marcar tareas como completadas y filtrarlas según su estado. La aplicación cuenta con un backend desarrollado en Java utilizando el framework Spring Boot, el cual expone los endpoints REST, y un frontend desarrollado con HTML, CSS y JavaScript puro que consume dichos servicios mediante peticiones HTTP usando fetch().
 
-En el backend, las tareas se gestionan en memoria mediante una estructura de datos tipo ArrayList, lo que permite almacenar dinámicamente la información durante la ejecución del programa. Cada tarea posee un identificador único autoincremental, un título, una descripción y un estado booleano que indica si ha sido completada o no. Aunque el sistema no utiliza base de datos persistente, su diseño permite una futura integración con tecnologías como MySQL o PostgreSQL.
+En el backend, las tareas se gestionan en memoria mediante una estructura de datos tipo ArrayList, lo que permite almacenar dinámicamente la información durante la ejecución del programa. Cada tarea posee un identificador único autoincremental, un título, una descripción y un estado booleano que indica si ha sido completada o no. 
 
 El frontend proporciona una interfaz moderna y responsiva que permite:
 
